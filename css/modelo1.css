@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Lato');
+
+body {
+    /* width: 100vw;
+    min-height: 100vh; */
+    margin: 0px;
+    border: 0px;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+main .lateral{
+    width: 30%;
+    min-height: 100vh;
+    background-color:rgb(23, 23, 23);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+main .lateral .foto {
+    border-radius: 50%;
+    width: 70%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+main .lateral h1 {
+    color: rgb(75, 178, 219);
+    text-transform: uppercase;
+    font-family: 'Francois One'
+}
+
+main .lateral h3 {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-family: 'Lato'
+}
+
+main .principal{
+    width: 70%;
+    min-height: 100vh;
+    background-color:rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Lato';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main .principal h2 {
+    color: rgb(23, 23, 23);
+    text-transform: uppercase;
+    font-family: 'Francois One';
+    width:100%;
+    margin-bottom: 0px;
+    border-bottom: 2px solid rgb(23, 23, 23);
+}
+
+main .principal .lista-topicos {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+main .principal .lista-topicos li h4 {
+    color: rgb(75, 178, 219);
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+
+main .principal .lista-topicos p {
+    margin: 0px;
+}
+
+@page {
+    margin: 0;
+}
