@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+body {
+    margin: 0px;
+    border: 0px;
+    font-family: 'Open Sans';
+}
+
+section.topo {
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 43, 43);
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+section.topo h1 {
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+section.topo h2 {
+    font-weight: lighter;
+}
+
+section.topo p span {
+    font-weight: bold;
+}
+
+section.conteudo {
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+section.conteudo h3 {
+    text-transform: uppercase;
+}
+
+section.conteudo .lista-topicos {
+    list-style: none;
+    padding: 0px;
+}
+
+section.conteudo div {
+    border-left: 1px solid rgb(43, 43, 43);
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+section.conteudo div h4, p{
+    margin: 0px;
+}
+
+@page {
+    margin: 0px;
+}

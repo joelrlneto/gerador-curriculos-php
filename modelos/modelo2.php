@@ -78,6 +78,7 @@
                     </div>
                 </li>
             </ul>
+        </section>
     </main>
 </body>
 </html>
