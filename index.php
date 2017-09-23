@@ -2,80 +2,99 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=false">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gerador de Currículo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Gerador de Currículos</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
     </nav>
-    <div class="container">
+    <main>
         <form action="gerarCurriculo.php" method="post">
-        <div class="card">
-            <h4 class="card-header">Gerar novo currículo</h4>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Informações gerais</h4>
 
-            <div class="card-body">
-                <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input type="text" class="form-control" name="nome" id="nome">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" name="nome" id="nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="cargo">Cargo pretendido</label>
+                        <input type="text" class="form-control" name="cargo" id="cargo">
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" class="form-control" name="endereco" id="endereco">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="text" class="form-control" name="telefone" id="telefone">
+                            </div>
+                        </div> 
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" name="email" id="email">
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <label for="resumo">Resumo</label>
+                        <textarea class="form-control" name="resumo" id="resumo"></textarea>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" class="form-control" name="endereco" id="endereco">
+
+                <div class="card-body" id="div-formacoes">
+                    <h4 class="card-title">Formação</h4>
+                    <button class="btn btn-sm right" id="btn-adicionar-formacao" title="Adicionar formação">Adicionar formação</button>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="sexo">Sexo</label>
-                            <select class="form-control" name="sexo" id="sexo">
-                                <option value="Masculino">Masculino</option>
-                                <option value="Feminino">Feminino</option>
-                                <option value="Não declarado">Não declarado</option>
-                            </select>
-                        </div>
-                    </div> 
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="idade">Idade</label>
-                            <input type="number" class="form-control" name="idade" id="idade">
-                        </div>
-                    </div> 
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="estado-civil">Estado civil</label>
-                            <select class="form-control" name="estado-civil" id="estado-civil">
-                                <option value="Casado(a)">Casado(a)</option>
-                                <option value="Solteiro(a)">Solteiro(a)</option>
-                                <option value="Divorciado(a)">Divorciado(a)</option>
-                                <option value="Viúvo(a)">Viúvo(a)</option>
-                            </select>
-                        </div>
-                    </div>                 
+
+                <div class="card-body" id="div-experiencias">
+                    <h4 class="card-title">Experiência</h4>
+                    <button class="btn btn-sm right" id="btn-adicionar-experiencia" title="Adicionar experiência">Adicionar experiência</button>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" name="telefone" id="telefone">
+
+                <div class="card-body" id="div-experiencias">
+                    <h4 class="card-title">Modelo de currículo</h4>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="modelo" id="modelo1" value="modelo1"> Moderno preto
+                                </label>
+                            </div>
                         </div>
-                    </div> 
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" class="form-control" name="email" id="email">
+                        <div class="col-12 col-md-4">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                 <input class="form-check-input" type="radio" name="modelo" id="modelo2" value="modelo2"> Moderno azul
+                                </label>
+                            </div>
                         </div>
-                    </div> 
+                        <div class="col-12 col-md-4">
+                            <div class="form-check form-check-inline ">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="modelo" id="modelo3" value="modelo3"> Básico
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card-footer">
-                <button class="btn btn-primary" type="submit">Gerar currículo</button>
-                <button class="btn btn-default" type="reset">Limpar campos</button>
+                
+                <div class="card-footer">
+                    <button class="btn btn-primary" type="submit">Gerar currículo</button>
+                    <button class="btn btn-default" type="reset">Limpar campos</button>
+                </div>
             </div>
         </form>
-    </div>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
