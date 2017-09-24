@@ -10,10 +10,10 @@ $(function(){
                     '            <div class="col-12 col-md-5">'+
                     '                <input type="text" class="form-control" placeholder="Instituição">'+
                     '            </div>'+
-                    '            <div class="col-9 col-md">'+
+                    '            <div class="col-12 col-md">'+
                     '                <input type="text" class="form-control" placeholder="Conclusão">'+
                     '            </div>'+
-                    '            <div class="col col-md">'+
+                    '            <div class="col-12 col-md">'+
                     '                <button type="button" class="btn btn-danger form-control btn-remover-item" title="Remover formação">&times;</button>'+
                     '            </div>'+
                     '        </div>'+

@@ -4,35 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Currículo | Modelo 1</title>
-    <link rel="stylesheet" href="../css/modelo2.css">
+    <title>Currículo | Modelo 2</title>
+    <link rel="stylesheet" href="css/modelo2.css">
 </head>
 <body>
     <main>
         <section class="lateral">
-            <img src="../img/avatar1.png" alt="Foto" class="foto">
+            <img src="img/avatar1.png" alt="Foto" class="foto">
             <div class="topico-lateral">
-                <img src="../img/icone-endereco-1.png" alt="Endereço">
-                <span>Rua Fulano de Tal, 111. Bairro Sem Nome. João Pessoa - PB.</span>
+                <img src="img/icone-endereco-1.png" alt="Endereço">
+                <span><?= $dados['endereco']; ?></span>
             </div>
             <div class="topico-lateral">
-                <img src="../img/icone-telefone-1.png" alt="Telefone">
-                <span>(83) 99876-5432</span>
+                <img src="img/icone-telefone-1.png" alt="Telefone">
+                <span><?= $dados['telefone']; ?></span>
             </div>
             <div class="topico-lateral">
-                <img src="../img/icone-email-1.png" alt="E-mail">
-                <span>joaosilva@gmail.com</span>
+                <img src="img/icone-email-1.png" alt="E-mail">
+                <span><?= $dados['email']; ?></span>
             </div>
         </section>
         <section class="principal">
-            <h1>João da Silva</h1>
+            <h1><?= $dados['nome']; ?></h1>
             
-            <h2>Engenheiro Eletricista</h2>
+            <h2><?= $dados['cargo']; ?></h2>
             
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, ducimus provident incidunt officiis nesciunt quas optio? Facere provident enim ut nihil, animi, rem perferendis laudantium adipisci cum in modi voluptate.</p>
+            <p><?= $dados['resumo']; ?></p>
             
             <div class="cabecalho-secao">
-                <img src="../img/icone-formacao-1.png" alt="Formação">
+                <img src="img/icone-formacao-1.png" alt="Formação">
                 <h3>Formação</h3>
                 <div class="separador"></div>
             </div>
@@ -55,7 +55,7 @@
             </ul>
             
             <div class="cabecalho-secao">
-                <img src="../img/icone-experiencia-1.png" alt="Experiência">
+                <img src="img/icone-experiencia-1.png" alt="Experiência">
                 <h3>Experiência</h3>
                 <div class="separador"></div>
             </div>
@@ -80,5 +80,8 @@
             </ul>
         </section>
     </main>
+    <script>
+        window.print();
+    </script>
 </body>
 </html>

@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Currículo | Modelo 1</title>
-    <link rel="stylesheet" href="../css/modelo3.css">
+    <title>Currículo | Modelo 3</title>
+    <link rel="stylesheet" href="css/modelo3.css">
 </head>
 <body>
     <main>
         <section class="topo">
-            <h1>João da Silva</h1>
-            <h2>Engenheiro Eletricista</h2>
-            <p><span>Telefone(s): </span>(83) 99876-5432 | (83) 98754-1234</p>
-            <p><span>E-mail: </span>joaosilva@gmail.com</p>
-            <p><span>Endereço: </span>Rua Fulano de Tal, 123. Bairro Sem Nome. Cidade Qualquer - PB.</p>
+            <h1><?= $dados['nome']; ?></h1>
+            <h2><?= $dados['cargo']; ?></h2>
+            <p><span>Telefone(s): </span><?= $dados['telefone']; ?></p>
+            <p><span>E-mail: </span><?= $dados['email']; ?></p>
+            <p><span>Endereço: </span><?= $dados['endereco']; ?></p>
         </section>
         <section class="conteudo">
             <h3>Resumo</h3>
             
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ducimus omnis commodi adipisci repellat, quisquam numquam atque dignissimos obcaecati repudiandae ipsam itaque iste rerum neque fugiat tenetur eos officia consequatur.</p>
+            <p><?= $dados['resumo']; ?></p>
 
             <h3>Formação</h3>
 
@@ -60,5 +60,8 @@
             </ul>
         </section>
     </main>
+    <script>
+        window.print();
+    </script>
 </body>
 </html>

@@ -12,7 +12,7 @@
         <a class="navbar-brand" href="#">Gerador de Currículos</a>
     </nav>
     <main>
-        <form action="gerarCurriculo.php" method="post">
+        <form action="gerarCurriculo.php" method="post" target="_blank">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Informações gerais</h4>
@@ -65,7 +65,7 @@
                         <div class="col-12 col-md-4">
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="modelo" id="modelo1" value="modelo1"> Moderno preto
+                                    <input class="form-check-input" type="radio" name="modelo" id="modelo1" value="modelo1" checked> Moderno preto
                                 </label>
                             </div>
                         </div>

@@ -1,12 +1,14 @@
 <?php
 
+$modelo = $_POST['modelo'];
+
 $dados = array(
     'nome' => $_POST['nome'],
     'cargo' => $_POST['cargo'],
     'endereco' => $_POST['endereco'],
     'telefone' => $_POST['telefone'],
     'email' => $_POST['email'],
+    'resumo' => $_POST['resumo']
 );
 
-echo '<pre>';
-print_r($dados);
+require_once("modelos/{$modelo}.php");
