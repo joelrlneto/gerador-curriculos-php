@@ -1,6 +1,10 @@
 $(function(){
+    //Quando clicar no botão para adicionar nova formação
     $("#btn-adicionar-formacao").click(function(e){
+        //Evita que o formulário seja enviado ao clicar nesse botão
         e.preventDefault();
+
+        //Gera a estrutura do HTML necessária para criar uma nova linha para adicionar formação
         var linha = '<div class="card">'+
                     '    <div class="card-body">'+
                     '        <div class="row">'+
@@ -19,11 +23,17 @@ $(function(){
                     '        </div>'+
                     '    </div>'+
                     '</div>';
+        
+        //Adiciona a nova linha na <div id="div-formacoes">
         $("#div-formacoes").append(linha);
     });
 
+    //Quando clicar no botão para adicionar nova experiência
     $("#btn-adicionar-experiencia").click(function(e){
+        //Evita que o formulário seja enviado ao clicar nesse botão
         e.preventDefault();
+
+        //Gera a estrutura do HTML necessária para criar uma nova linha para adicionar experiência
         var linha = '<div class="card">'+
                     '    <div class="card-body">'+
                     '        <div class="row">'+
@@ -45,10 +55,14 @@ $(function(){
                     '        </div>'+
                     '    </div>'+
                     '</div>';
+        
+        //Adiciona a nova linha na <div id="div-experiencias">
         $("#div-experiencias").append(linha);
     });
 
+    //Quando clicar no botão para remover formação ou experiência
     $("#div-formacoes, #div-experiencias").on("click", ".btn-remover-item", function(){
+        //Remove a <div class="card"> que contém a formação ou experiência
         $(this).parent().parent().parent().parent().remove();
     })
 });
