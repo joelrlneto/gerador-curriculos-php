@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Gerador de Currículos</a>
     </nav>
-    <main>
+    <main class="container" style="margin-top:20px">
         <form action="gerarCurriculo.php" method="post" target="_blank">
             <div class="card">
                 <div class="card-body">

@@ -38,20 +38,15 @@
             </div>
         
             <ul class="lista-topicos">
-                <li>
-                    <div>
-                        <h4>Bacharelado em Engenharia Elétrica</h4>
-                        <p>Universidade Federal da Paraíba</p>
-                        <p>2017</p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h4>Técnico em Eletricidade e Eletrônica</h4>
-                        <p>Instituto Federal de Educação, Ciência e Tecnologia da Paraíba</p>
-                        <p>2013</p>
-                    </div>
-                </li>
+                <?php for($i = 0; $i < sizeof($dados['formacoes']['cursos']); $i++) { ?>
+                    <li>
+                        <div>
+                            <h4><?= $dados['formacoes']['cursos'][$i] ?></h4>
+                            <p><?= $dados['formacoes']['instituicoes'][$i] ?></p>
+                            <p><?= $dados['formacoes']['conclusoes'][$i] ?></p>
+                        </div>
+                    </li>
+                <?php } ?>
             </ul>
             
             <div class="cabecalho-secao">
@@ -61,22 +56,15 @@
             </div>
 
             <ul class="lista-topicos">
-                <li>
-                    <div>
-                        <h4>Estágio em Engenharia Elétrica</h4>
-                        <p>Super Top Engenharia</p>
-                        <p>2015 a 2017</p>
-                    </div>
-                </li>
-                <li>
-                    <div>
+                <?php for($i = 0; $i < sizeof($dados['experiencias']['cargos']); $i++) { ?>
+                    <li>
                         <div>
-                            <h4>Técnico em Eletrônica</h4>
-                            <p>Eletrotunts</p>
-                            <p>2013 a 2015</p>
+                            <h4><?= $dados['experiencias']['cargos'][$i] ?></h4>
+                            <p><?= $dados['experiencias']['empresas'][$i] ?></p>
+                            <p><?= $dados['experiencias']['inicios'][$i] ?> a <?= $dados['experiencias']['fins'][$i] ?></p>
                         </div>
-                    </div>
-                </li>
+                    </li>
+                <?php } ?>
             </ul>
         </section>
     </main>
