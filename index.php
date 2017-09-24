@@ -13,7 +13,6 @@
     </nav>
     <main class="container" style="margin-top:20px">
         <form action="gerarCurriculo.php" method="post" target="_blank" enctype="multipart/form-data">
-            <input type="file" name="foto">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Informações gerais</h4>
