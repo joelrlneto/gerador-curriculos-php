@@ -10,7 +10,7 @@
 <body>
     <main>
         <section class="lateral">
-            <img src="img/avatar1.png" alt="Foto" class="foto">
+            <img src="<?= $dados['foto']; ?>" alt="Foto" class="foto">
             <div class="topico-lateral">
                 <img src="img/icone-endereco-1.png" alt="Endereço">
                 <span><?= $dados['endereco']; ?></span>
@@ -31,41 +31,45 @@
             
             <p><?= $dados['resumo']; ?></p>
             
-            <div class="cabecalho-secao">
-                <img src="img/icone-formacao-1.png" alt="Formação">
-                <h3>Formação</h3>
-                <div class="separador"></div>
-            </div>
-        
-            <ul class="lista-topicos">
-                <?php for($i = 0; $i < sizeof($dados['formacoes']['cursos']); $i++) { ?>
-                    <li>
-                        <div>
-                            <h4><?= $dados['formacoes']['cursos'][$i] ?></h4>
-                            <p><?= $dados['formacoes']['instituicoes'][$i] ?></p>
-                            <p><?= $dados['formacoes']['conclusoes'][$i] ?></p>
-                        </div>
-                    </li>
-                <?php } ?>
-            </ul>
+            <?php if($dados['formacoes']) { ?>
+                <div class="cabecalho-secao">
+                    <img src="img/icone-formacao-1.png" alt="Formação">
+                    <h3>Formação</h3>
+                    <div class="separador"></div>
+                </div>
             
-            <div class="cabecalho-secao">
-                <img src="img/icone-experiencia-1.png" alt="Experiência">
-                <h3>Experiência</h3>
-                <div class="separador"></div>
-            </div>
+                <ul class="lista-topicos">
+                    <?php for($i = 0; $i < sizeof($dados['formacoes']['cursos']); $i++) { ?>
+                        <li>
+                            <div>
+                                <h4><?= $dados['formacoes']['cursos'][$i] ?></h4>
+                                <p><?= $dados['formacoes']['instituicoes'][$i] ?></p>
+                                <p><?= $dados['formacoes']['conclusoes'][$i] ?></p>
+                            </div>
+                        </li>
+                    <?php } ?>
+                </ul>
+            <?php } ?>
+            
+            <?php if($dados['experiencias']) { ?>
+                <div class="cabecalho-secao">
+                    <img src="img/icone-experiencia-1.png" alt="Experiência">
+                    <h3>Experiência</h3>
+                    <div class="separador"></div>
+                </div>
 
-            <ul class="lista-topicos">
-                <?php for($i = 0; $i < sizeof($dados['experiencias']['cargos']); $i++) { ?>
-                    <li>
-                        <div>
-                            <h4><?= $dados['experiencias']['cargos'][$i] ?></h4>
-                            <p><?= $dados['experiencias']['empresas'][$i] ?></p>
-                            <p><?= $dados['experiencias']['inicios'][$i] ?> a <?= $dados['experiencias']['fins'][$i] ?></p>
-                        </div>
-                    </li>
-                <?php } ?>
-            </ul>
+                <ul class="lista-topicos">
+                    <?php for($i = 0; $i < sizeof($dados['experiencias']['cargos']); $i++) { ?>
+                        <li>
+                            <div>
+                                <h4><?= $dados['experiencias']['cargos'][$i] ?></h4>
+                                <p><?= $dados['experiencias']['empresas'][$i] ?></p>
+                                <p><?= $dados['experiencias']['inicios'][$i] ?> a <?= $dados['experiencias']['fins'][$i] ?></p>
+                            </div>
+                        </li>
+                    <?php } ?>
+                </ul>
+            <?php } ?>
         </section>
     </main>
     <script>

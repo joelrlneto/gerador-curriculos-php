@@ -12,7 +12,8 @@
         <a class="navbar-brand" href="#">Gerador de Currículos</a>
     </nav>
     <main class="container" style="margin-top:20px">
-        <form action="gerarCurriculo.php" method="post" target="_blank">
+        <form action="gerarCurriculo.php" method="post" target="_blank" enctype="multipart/form-data">
+            <input type="file" name="foto">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Informações gerais</h4>
@@ -21,9 +22,19 @@
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control" name="nome" id="nome">
                     </div>
-                    <div class="form-group">
-                        <label for="cargo">Cargo pretendido</label>
-                        <input type="text" class="form-control" name="cargo" id="cargo">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="cargo">Cargo pretendido</label>
+                                <input type="text" class="form-control" name="cargo" id="cargo">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="foto">Foto</label>
+                                <input type="file" class="form-control" name="foto" id="foto">
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="endereco">Endereço</label>

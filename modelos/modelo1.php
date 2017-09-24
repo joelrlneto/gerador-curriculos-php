@@ -10,7 +10,7 @@
 <body>
     <main>
         <section class="lateral">
-            <img src="img/avatar1.png" alt="Foto" class="foto">
+            <img src="<?= $dados['foto']; ?>" alt="Foto" class="foto">
             <h1><?= $dados['nome']; ?></h1>
             <h3><?= $dados['cargo']; ?></h3>
         </section>
@@ -19,33 +19,37 @@
             
             <p><?= $dados['resumo']; ?></p>
             
-            <h2>Formação</h2>
+            <?php if($dados['formacoes']) { ?>
+                <h2>Formação</h2>
 
-            <ul class="lista-topicos">
-                <?php for($i = 0; $i < sizeof($dados['formacoes']['cursos']); $i++) { ?>
-                    <li>
-                        <div>
-                            <h4><?= $dados['formacoes']['cursos'][$i] ?></h4>
-                            <p><?= $dados['formacoes']['instituicoes'][$i] ?></p>
-                            <p><?= $dados['formacoes']['conclusoes'][$i] ?></p>
-                        </div>
-                    </li>
-                <?php } ?>
-            </ul>
+                <ul class="lista-topicos">
+                    <?php for($i = 0; $i < sizeof($dados['formacoes']['cursos']); $i++) { ?>
+                        <li>
+                            <div>
+                                <h4><?= $dados['formacoes']['cursos'][$i] ?></h4>
+                                <p><?= $dados['formacoes']['instituicoes'][$i] ?></p>
+                                <p><?= $dados['formacoes']['conclusoes'][$i] ?></p>
+                            </div>
+                        </li>
+                    <?php } ?>
+                </ul>
+            <?php } ?>
             
-            <h2>Experiência</h2>
+            <?php if($dados['experiencias']) { ?>
+                <h2>Experiência</h2>
 
-            <ul class="lista-topicos">
-                <?php for($i = 0; $i < sizeof($dados['experiencias']['cargos']); $i++) { ?>
-                    <li>
-                        <div>
-                            <h4><?= $dados['experiencias']['cargos'][$i] ?></h4>
-                            <p><?= $dados['experiencias']['empresas'][$i] ?></p>
-                            <p><?= $dados['experiencias']['inicios'][$i] ?> a <?= $dados['experiencias']['fins'][$i] ?></p>
-                        </div>
-                    </li>
-                <?php } ?>
-            </ul>
+                <ul class="lista-topicos">
+                    <?php for($i = 0; $i < sizeof($dados['experiencias']['cargos']); $i++) { ?>
+                        <li>
+                            <div>
+                                <h4><?= $dados['experiencias']['cargos'][$i] ?></h4>
+                                <p><?= $dados['experiencias']['empresas'][$i] ?></p>
+                                <p><?= $dados['experiencias']['inicios'][$i] ?> a <?= $dados['experiencias']['fins'][$i] ?></p>
+                            </div>
+                        </li>
+                    <?php } ?>
+                </ul>
+            <?php } ?>
 
             <h2>Contato</h2>
 
